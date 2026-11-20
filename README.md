@@ -1,40 +1,60 @@
-# Hilda Kelly Portfolio (Starter)
+# Hilda Kelly Portfolio · Clickable Project Pages
 
-A lightweight, responsive portfolio built with HTML and CSS. No framework, bundler, or JavaScript required.
+A static website for GitHub Pages, built with HTML and CSS. No dependencies or build process are required.
 
-## What's included?
+## Open locally
 
-- `index.html` — Homepage with hero, featured case study, six-project grid, About, and Contact sections.
-- `sirens.html` — Starter project case study page.
-- `style.css` — Fonts, colors, grids, mobile layouts, and visual styling.
-- `assets/` — Thumbnail crops from the portfolio screenshots provided in the conversation, plus a simple favicon.
+Open `index.html` in a browser or use VS Code Live Server.
 
-## Run locally
+## What's new in this version?
 
-Open `index.html` in a browser, or use VS Code's Live Server extension. No installation is required.
+- Each homepage project card is clickable, including its title and image.
+- Each project now has its own HTML page, with a link back to `index.html#work` and links to the previous/next project.
+- Clicking the wordmark in the header returns to the homepage.
+- The first **Sirens Against Waste** page still has its original starter layout. The other six pages are editable case-study templates, not finished project write-ups.
 
-## Publish with GitHub Pages
+## Project pages
 
-1. Create a public GitHub repository, for example `yourusername.github.io` for a user site. (A regular repository name also works for a project site.)
-2. Upload **all of the files and the `assets` folder**, keeping the folder structure intact.
-3. Go to **Settings > Pages > Build and deployment**, choose **Deploy from a branch**, `main`, and `/(root)`.
-4. Open the URL shown in the Pages settings once publishing finishes.
+| Project | File |
+| --- | --- |
+| Sirens Against Waste | `sirens.html` |
+| Heritage Haven | `heritage-haven.html` |
+| Puppy Calendar | `puppy-calendar.html` |
+| Preflight Poster | `preflight.html` |
+| The Paper Court | `paper-court.html` |
+| Digital Image Adjustment | `retouching.html` |
+| Harvest Bites | `harvest-bites.html` |
 
-## Important before launch
+### How a homepage link works
 
-- **Replace cropped screenshot thumbnails** under `assets/` with high-resolution original image exports. The current images are extracted from the screenshots shared in the conversation and are intended for layout scaffolding only.
-- Change the text-based header mark to your original handwritten logo if you prefer.
-- Update the About and Contact text with accurate personal/professional details before sharing publicly.
-- Add real project pages and link each card once ready. Only the Sirens Against Waste case-study link is active in this starter.
-- Fonts are loaded from Google Fonts. Fallbacks are provided for offline use.
+```html
+<article class="project-card">
+  <a class="project-card-link" href="puppy-calendar.html">
+    <img src="assets/puppy-calendar.jpg" alt="Puppy calendar design">
+    <div class="project-meta"><h4>Puppy Calendar</h4><p>Illustration / Print</p></div>
+  </a>
+</article>
+```
 
-## Palette
+`href="puppy-calendar.html"` opens a file in the same folder. The page's `href="index.html#work"` returns to the homepage at the Selected Work section. These **relative links** work both locally and on GitHub Pages, including under a repository project URL.
 
-- Blush pink: `#FBE5F3`
-- Warm cream: `#FAF9EE`
-- Forest green: `#245037`
-- Leaf accent: `#93B84B`
-- Dusty rose: `#E9B8C7`
-- Body text: `#343D36`
+## Replacing the placeholders
 
-Edit CSS variables at the top of `style.css` to experiment.
+The thumbnails are crops from your provided screenshots. Replace these with high-resolution original exports, then fill in the project brief, role, tools, decisions, and additional images on each case-study page. The generic starter copy is not intended as final portfolio content.
+
+## Upload to GitHub Pages
+
+Upload all `.html` files, `style.css`, `.nojekyll`, and the `assets/` folder to the **root** of the repository. If you already uploaded the first starter, this version **replaces** `index.html`, `sirens.html`, `style.css`, and `README.md`, and **adds** the six new HTML files. Keep the existing asset files.
+
+Then in GitHub repository **Settings → Pages**, use **Deploy from a branch**, `main`, `/(root)`.
+
+## Color palette
+
+| Color | Hex |
+| --- | --- |
+| Blush pink | `#FBE5F3` |
+| Warm cream | `#FAF9EE` |
+| Forest green | `#245037` |
+| Leaf green | `#93B84B` |
+| Dusty rose | `#E9B8C7` |
+| Soft charcoal | `#343D36` |
