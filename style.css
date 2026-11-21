@@ -7,7 +7,8 @@
   --rose: #e9b8c7;
   --ink: #343d36;
   --white: #fffdf7;
-  --serif: 'Playfair Display', Georgia, serif;
+--serif: 'Fraunces', Georgia, serif;
+/* Suggested heading weight: 700 */
   --sans: 'DM Sans', Arial, sans-serif;
   --script: 'Caveat', cursive;
 }
