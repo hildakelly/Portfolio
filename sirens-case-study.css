@@ -1,0 +1,55 @@
+/* Sirens case study styles. This file affects sirens.html only. */
+.sirens-hero { overflow: hidden; }
+.sirens-hero .case-intro .eyebrow { margin-bottom: 18px; }
+.sirens-hero .case-intro > p:last-child { font-size: clamp(16px,1.6vw,19px); line-height:1.65; }
+.sirens-overview .case-info > div:nth-child(2) { max-width: 540px; }
+.sirens-overview .case-info > div:nth-child(2) p { margin-bottom: 14px; }
+.sirens-overview .case-facts { gap: 20px; padding: 23px; border: 1px solid #dbe3d2; border-radius: 13px; background: #f4f5e9; }
+.sirens-approach { background: #fffdf7; }
+.sirens-two-column { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: clamp(25px,6vw,100px); }
+.sirens-two-column h2 { font-size: clamp(2.4rem,4.1vw,4.25rem); line-height: 1.09; letter-spacing: -.04em; }
+.sirens-copy { padding-top: 10px; max-width: 560px; }
+.sirens-copy h3 { font-size: 1.55rem; margin: 29px 0 9px; }
+.sirens-copy p { font-size: 16px; }
+.sirens-brand-grid img { object-fit: contain; background: #fff; }
+.sirens-identity .gallery-intro { max-width: 780px; }
+.sirens-detail-note { display: grid; grid-template-columns: 1.1fr .8fr; align-items: center; gap: clamp(25px,6vw,80px); max-width: 900px; margin: 60px auto 0; padding: 28px; background: rgba(255,255,255,.5); border-radius: 16px; }
+.sirens-detail-note h3 { font-size: clamp(1.5rem,2.5vw,2rem); }
+.sirens-detail-note p { max-width: 540px; }
+.sirens-detail-note figure, .sirens-application figure, .sirens-social figure { margin: 0; min-width: 0; }
+.sirens-detail-note .zoom-trigger img { aspect-ratio: 1; object-fit: contain; background: #090909; }
+.sirens-detail-note figcaption { margin-top: 8px; color: #526d55; font-weight: 600; font-size: 13px; }
+.sirens-section-heading { display:grid; grid-template-columns: .9fr 1.1fr; gap: clamp(25px,5vw,90px); align-items: end; margin-bottom: 28px; }
+.sirens-section-heading h2 { font-size: clamp(2rem,3.3vw,3.25rem); margin-bottom: 0; }
+.sirens-section-heading > p { max-width: 610px; margin-bottom: 4px; }
+.sirens-application { background: #faf9ee; }
+.sirens-application-grid { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 26px 20px; }
+.sirens-application-grid figure { grid-column: span 2; }
+.sirens-application-grid figure.wide { grid-column: span 3; }
+.sirens-application-grid figure img { width: 100%; aspect-ratio: 4/3; border-radius: 12px; object-fit: cover; background:#fff; }
+.sirens-application-grid figure.wide img { aspect-ratio: 1.38; }
+.sirens-application-grid figcaption, .sirens-social figcaption { color: #526d55; font-weight:600; margin-top:10px; font-size:13px; }
+.sirens-social { background: #e8eedc; }
+.sirens-social-grid { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 23px; margin-top: 28px; }
+.sirens-social-grid img { width: 100%; aspect-ratio: 4/5; object-fit: contain; border-radius: 12px; background:#e0f2f1; }
+.sirens-disclaimer { margin: 30px 0 0; max-width: 850px; color: #506052; font-size: 12px; }
+.sirens-outcome > .container > p:not(.eyebrow) { max-width: 780px; }
+@media (max-width: 800px) {
+ .sirens-two-column, .sirens-section-heading { grid-template-columns: 1fr; gap: 16px; }
+ .sirens-detail-note { margin-top: 36px; }
+}
+@media (max-width: 700px) {
+ .sirens-overview .case-facts { padding: 18px; }
+ .sirens-detail-note { grid-template-columns: 1fr; padding: 18px; }
+ .sirens-detail-note figure { max-width: 450px; }
+ .sirens-application-grid { gap: 23px 14px; }
+ .sirens-application-grid figure.wide { grid-column: span 6; }
+ .sirens-application-grid figure { grid-column: span 3; }
+ .sirens-social-grid { gap: 18px 12px; grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 450px) {
+ .sirens-application-grid figure, .sirens-application-grid figure.wide { grid-column: span 6; }
+ .sirens-social-grid { grid-template-columns: 1fr; }
+ .sirens-application-grid figure img, .sirens-application-grid figure.wide img { aspect-ratio: auto; max-height: 400px; object-fit: contain; }
+ .sirens-social-grid img { max-height: 510px; }
+}
